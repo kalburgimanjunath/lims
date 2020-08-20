@@ -1,7 +1,5 @@
 <p>Books International</p>
 <ngb-pagination [collectionSize]="volumeInfo.length" [(page)]="page" [(pageSize)]="pageSize"></ngb-pagination>
-
-
 <div *ngFor="let book of volumeInfo | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize">
     <div>Category:{{book.categories}}</div>
     <app-books [bookdetail]="book"></app-books>
