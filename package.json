@@ -22,6 +22,7 @@
     "@angular/router": "~10.0.3",
     "@ng-bootstrap/ng-bootstrap": "^7.0.0",
     "angular-paging": "^2.2.2",
+    "angular-socialshare": "^2.3.11",
     "bootstrap": "^4.5.0",
     "rxjs": "~6.5.5",
     "tslib": "^2.0.0",

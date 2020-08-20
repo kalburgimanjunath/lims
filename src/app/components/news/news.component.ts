@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import { Observable, forkJoin, animationFrameScheduler } from 'rxjs';
+import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-news',
@@ -8,8 +9,8 @@ import { Observable, forkJoin, animationFrameScheduler } from 'rxjs';
   styleUrls: ['./news.component.scss']
 })
 export class NewsComponent implements OnInit {
-
-  constructor(private http : HttpClient) {
+  closeResult = '';
+  constructor(private http : HttpClient,private modalService: NgbModal) {
 
   }
   volumeInfo:Object[] =[];
@@ -95,15 +96,41 @@ categories = ["angular","angularjs","angular interview","react","reactjs","react
     console.log(this.volumeInfo);
   }
 
+  filterArticle(title:string):any{
+    return this.volumeInfo.map((item)=>{
+      return item['articles'].title == title;
+    })
+  }
+
   selectedArticle(title:string):any{
     console.log(title);
     this.detailpage = true;
+
     this.details = {
-      title: title
+      title: title,
+      content: this.filterArticle(title)
     }
   }
   hideselectedArticle(title:string){
     this.detailpage = false;
+  }
+
+  open(content) {
+    this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {
+      this.closeResult = `Closed with: ${result}`;
+    }, (reason) => {
+      this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
+    });
+  }
+
+  private getDismissReason(reason: any): string {
+    if (reason === ModalDismissReasons.ESC) {
+      return 'by pressing ESC';
+    } else if (reason === ModalDismissReasons.BACKDROP_CLICK) {
+      return 'by clicking on a backdrop';
+    } else {
+      return `with: ${reason}`;
+    }
   }
 
 }

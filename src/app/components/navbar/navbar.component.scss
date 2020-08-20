@@ -1,0 +1,21 @@
+.navbar{
+    list-style-type:none;
+    flex:1 0 25%;
+    margin:0;
+    padding:0;
+}
+.navbar li{
+    padding:20px;
+    width:100%;
+    font-weight:400;
+    border-bottom:1px solid #440000;
+}
+.navbar li:hover{
+    background-color:#474e6d;
+    cursor: pointer;
+}
+
+.navbar li a{
+    color:white;   
+    text-decoration: none; 
+}
