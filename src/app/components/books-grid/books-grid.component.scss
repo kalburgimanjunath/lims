@@ -1,0 +1,26 @@
+.book-grid{
+    display:flex;
+    list-style-type:none;
+    margin:0;
+    flex-wrap:wrap;
+    width:100%;
+}
+.book-grid li{
+    list-style-type:none;
+    border:1px solid #d6d6d6;
+    background-color:#e0e0e0;
+    color:#303030;
+}
+
+.book-grid .book-content{
+    display:none;
+}
+
+.book-grid li a{
+    text-decoration: none;
+}
+
+.book-grid li:hover{
+    background-color:#b0b0b0;
+    color:#202020;
+}

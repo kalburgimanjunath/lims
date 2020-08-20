@@ -1,0 +1,16 @@
+<div>
+    <a [routerLink]="['../books/add']">Add</a>
+    <a [routerLink]="['../books/edit',1]">Edit</a>
+</div>
+
+<ngb-pagination [collectionSize]="books.length" [(page)]="page" [(pageSize)]="pageSize"></ngb-pagination>
+
+<pre>Current page: {{page}}</pre>
+
+<ul *ngFor = "let book of books | bookFilter:searchTxt : inputTags | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize" class="book-list" >
+    <li>
+        <a [routerLink]="['/bookdetail', book.id]">
+            <app-books [bookdetail]="book"></app-books>
+        </a>
+    </li>
+</ul>

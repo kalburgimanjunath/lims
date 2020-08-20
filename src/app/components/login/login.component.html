@@ -1,0 +1,28 @@
+
+<form formGroupName="loginForm">
+    <h1>Login Page</h1>
+    Form Status: {{ loginForm.status }}
+    <div>
+        Username: <input name="username" formControlName="username" required/>        
+        <div *ngIf="loginForm.username.errors.required">
+            Name is required.
+          </div>
+    </div>
+    <div>
+        Password: <input name="password" formControlName="password" required/>
+        <div *ngIf="password.errors.required">
+            Name is required.
+          </div>
+    </div>
+    <div>
+        
+        <!-- <input type="checkbox" name="agree" formControlName="agree">Agree Save my username and password -->
+        <br><button type="button" class="btn-primary" [disabled]="!loginForm.valid" (click)="loginSubmit">Login</button>
+        <a href="">Forgot password</a> 
+        
+
+    </div>
+    <p>
+        Form Value: {{ loginForm.value }}
+      </p>
+</form>

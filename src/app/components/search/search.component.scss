@@ -1,0 +1,17 @@
+.search-holder{
+    border:none;
+    background-color:#d7d7d7;
+    padding:10px;
+    border:1px solid #d8d8d8;
+    display:flex;
+    flex-wrap:wrap;
+}
+.search-holder input{
+    border:none;
+    background-color:transparent;
+    width:100%;
+}
+.search-holder input:hover{
+    border:none;
+    background-color:transparent;
+}

@@ -1,0 +1,27 @@
+<form formGroupName="signupForm">
+    <h1>Signup Page</h1>
+    Form Status: {{ signupForm.status }}
+    <div>
+        FirstName: <input name="firstname" formControlName="firstname" required/>        
+        <div *ngIf="signupForm.firstname.errors.required">
+            Name is required.
+          </div>
+    </div>
+    <div>
+        Password: <input name="password" formControlName="password" required/>
+        <div *ngIf="signupForm.password.errors.required">
+            Name is required.
+          </div>
+    </div>
+    <div>
+        
+        <!-- <input type="checkbox" name="agree" formControlName="agree">Agree Save my username and password -->
+        <br><button type="button" class="btn-primary" [disabled]="!signupForm.valid">Login</button>
+        <a href="">Forgot password</a> 
+        <a [routerLink] = "['login']">Account Exists:Login</a>
+
+    </div>
+    <p>
+        Form Value: {{ signupForm.value }}
+      </p>
+</form>

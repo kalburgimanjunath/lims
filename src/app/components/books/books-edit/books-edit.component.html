@@ -1,0 +1,53 @@
+
+
+<form formGroupName="bookEditForm" (onSubmit)="bookSubmit(bookEditForm)">
+    <h1>Edit Book Page</h1>
+    Form Status: {{ bookEditForm.status }}
+    <div>
+        Category: <input name="category" formControlName="category" required/>        
+        <div *ngIf="bookEditForm.category.errors.required">
+            Name is required.
+          </div>
+    </div>
+    <div>
+        Author: <input name="author" formControlName="author" required/>
+        <div *ngIf="bookEditForm.author.errors.required">
+            Name is required.
+          </div>
+    </div>
+    <div>
+        Author: <input name="title" formControlName="title" required/>
+        <div *ngIf="bookEditForm.title.errors.required">
+            Name is required.
+          </div>
+    </div>
+    <div>
+        created_at: <input name="created_at" formControlName="created_at" required/>
+        <div *ngIf="bookEditForm.created_at.errors.required">
+            Name is required.
+          </div>
+    </div>
+    <div>
+        image: <input name="image" formControlName="image" required/>
+        <div *ngIf="bookEditForm.image.errors.required">
+            Name is required.
+          </div>
+    </div>
+    <div>
+        description: <input name="description" formControlName="description" required/>
+        <div *ngIf="bookEditForm.description.errors.required">
+            Name is required.
+          </div>
+    </div>
+
+    <div>
+        
+        <br><button type="button" class="btn-primary" [disabled]="!bookEditForm.valid">Add</button>
+        
+        
+
+    </div>
+    <p>
+        Form Value: {{ bookEditForm.value }}
+      </p>
+</form>

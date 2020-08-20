@@ -1,0 +1,8 @@
+<h1>Books Catelog</h1>
+<ul *ngFor = "let book of books" class="book-grid">
+    <li>
+        <a [routerLink]="['/bookdetail', book.id]">
+            <app-books [bookdetail]="book"></app-books>
+        </a>
+    </li>
+</ul>

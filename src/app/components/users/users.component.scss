@@ -1,0 +1,26 @@
+.user-card{
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    margin: 0;
+    padding: 10px 0;
+    width: 100%;
+    justify-content: space-between;
+}
+.user-card li{
+    background-color:#d6d6d6;
+    display:flex;
+    flex-wrap:wrap;
+    cursor:pointer;
+}
+
+.user-card li:hover{
+    background-color:#d8d8;
+}
+
+.user-card-details{
+    flex:1 0 250px;
+    margin-left:20px;
+    flex-wrap:wrap;
+    max-width:250px;
+}

@@ -1,0 +1,9 @@
+<h1 class="search-holder">
+    <input type="search" name="search" [(ngModel)]="search" placeholder="Search"/>
+</h1>
+<div>{{search}}</div>
+<app-input-tags (selectedCategory)=selectedCategory($event)></app-input-tags>
+<label *ngFor="let tags of newtags">{{tags}} ,</label>
+
+<app-books-list searchTxt={{search}} [inputTags]=newtags></app-books-list>
+

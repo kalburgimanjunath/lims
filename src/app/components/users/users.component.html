@@ -1,0 +1,27 @@
+<p>users works!</p>
+<ul>    
+    <li><a [routerLink] = "['add']">Add</a></li>
+    <li><a [routerLink] = "['edit',1]">Edit</a></li>
+</ul>
+
+<h1>Users List</h1>
+<ul class="user-card">
+    <li *ngFor="let user of users">
+        <div>
+            <app-users-avatar [user]="user"></app-users-avatar>
+            <div class="user-card-details">
+                <div>Name:
+                    {{user.firstname}},{{user.lastname}}
+                </div>
+                <div>Address:
+                    {{user.address.street}}
+                    {{user.address.pincode}}
+                    {{user.address.homephone}}
+                </div>
+                <div>Mobile:
+                    {{user.mobile}}
+                </div>
+            </div>
+        </div>
+    </li>
+</ul>

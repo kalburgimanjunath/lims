@@ -1,0 +1,27 @@
+<div class="newscontainer">
+    <!-- <ngb-pagination [collectionSize]="volumeInfo.length" [(page)]="page" [(pageSize)]="pageSize"></ngb-pagination> -->
+    <ul>
+        <li *ngFor="let book of volumeInfo | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize">
+            <div class="news__items" > 
+                <div><a (click)=selectedArticle(book.title)><h2>{{book.title}}</h2></a></div>
+                <div><img src="{{book.image}}"/></div>
+                <div><h5>Authors:{{book.author}} Category:{{book.categories}}</h5></div>
+                <div>description:{{book.description}}</div>
+                <div>{{book.content}}</div>
+            </div>
+            <div *ngIf="detailpage" class="detailpage" (click)=hideselectedArticle(book.title)>
+                <div class="news__items" > 
+                    <div><h2>{{book.title}}</h2></div>
+                    <div><img src="{{book.image}}"/></div>
+                    <div class="post__content"> 
+                        <div><h5>Authors:{{book.author}} Category:{{book.categories}}</h5></div>
+                        <div>description:{{book.description}}</div>
+                        <div>description:{{book.content}}</div>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+
+

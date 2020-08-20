@@ -1,0 +1,19 @@
+<ngb-pagination [collectionSize]="volumeInfo.length" [(page)]="page" [(pageSize)]="pageSize"></ngb-pagination>
+
+<ul>
+    <li *ngFor="let book of volumeInfo | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize">
+        <div>Category:{{book.categories}}</div>
+        <app-books [bookdetail]="book"></app-books>
+        <!-- <div>
+            <img src="{{book.imageLinks.thumbnail}}"/>
+        </div> -->
+        <!-- <div>Title:{{book.title}}</div>
+        <div>subTitle:{{book.subtitle}}</div>
+        <div>Authors:{{book.authors}}</div>
+        <div>categories:{{book.categories}}</div>
+        <div>description:{{book.description}}</div> -->
+
+    </li>
+</ul>
+
+
