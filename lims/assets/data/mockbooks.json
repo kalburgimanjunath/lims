@@ -1,0 +1,66 @@
+const export MOCKBOOKS = [
+    {
+      "id":1,
+      "author":"Manjunath",
+      "title": "New home page",
+      "created_at": "10-20-2020",
+      "image": "/",
+      "description":"small description starts here"
+    },
+    {
+      "id":1,
+      "author":"Ravi Desai",
+      "title": "New Ravi page",
+      "created_at": "10-20-2020",
+      "image": "/",
+      "description":"small description starts here"
+    },
+    {
+      "id":1,
+      "author":"Manjunath",
+      "title": "New home page",
+      "created_at": "10-20-2020",
+      "image": "/",
+      "description":"small description starts here"
+    },
+    {
+      "id":1,
+      "author":"Ravi Desai",
+      "title": "New Ravi page",
+      "created_at": "10-20-2020",
+      "image": "/",
+      "description":"small description starts here"
+    },
+    {
+      "id":1,
+      "author":"Manjunath",
+      "title": "New home page",
+      "created_at": "10-20-2020",
+      "image": "/",
+      "description":"small description starts here"
+    },
+    {
+      "id":1,
+      "author":"Ravi Desai",
+      "title": "New Ravi page",
+      "created_at": "10-20-2020",
+      "image": "/",
+      "description":"small description starts here"
+    },
+    {
+      "id":1,
+      "author":"Manjunath",
+      "title": "New home page",
+      "created_at": "10-20-2020",
+      "image": "/",
+      "description":"small description starts here"
+    },
+    {
+      "id":1,
+      "author":"Ravi Desai",
+      "title": "New Ravi page",
+      "created_at": "10-20-2020",
+      "image": "/",
+      "description":"small description starts here"
+    }
+]
